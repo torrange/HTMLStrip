@@ -20,7 +20,5 @@ def main():
     except:
         print("Please provide a valid html file to parse.")
 
-
-
 if __name__ == "__main":
     main()
