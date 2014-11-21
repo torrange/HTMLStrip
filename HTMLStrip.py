@@ -3,7 +3,7 @@ from re import sub
 from sys import argv
 
 def clean_html(html):
-    cleaned = re.sub(r"(?is)<(script|style).*?>.*?(</\1>)", "", html.strip())
+    cleaned = sub(r"(?is)<(script|style).*?>.*?(</\1>)", "", html.strip())
     cleaned = sub(r"(?s)<!--(.*?)-->[\n]?", "", cleaned)
     cleaned = sub(r"(?s)<.*?>", " ", cleaned)
     cleaned = sub(r"&nbsp;", " ", cleaned)
